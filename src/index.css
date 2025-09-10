@@ -17,18 +17,18 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Cores do Colégio Alethus */
-    --primary: 25 95% 53%; /* Laranja vibrante */
+    /* Cores focadas no laranja */
+    --primary: 25 95% 53%; /* Laranja principal */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 342 75% 41%; /* Vinho/Bordô */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%; /* Cinza claro */
+    --secondary-foreground: 222.2 84% 4.9%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 51 100% 50%; /* Amarelo Poliedro */
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 25 100% 45%; /* Laranja mais escuro */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -38,15 +38,15 @@ All colors MUST be HSL.
     --ring: 25 95% 53%;
 
     
-    /* Gradientes mais vibrantes */
-    --gradient-hero: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(342 75% 41%) 50%, hsl(51 100% 50%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(51 100% 50%) 0%, hsl(25 95% 53%) 100%);
+    /* Gradientes mais suaves com laranja */
+    --gradient-hero: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 80% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(25 10% 98%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(25 95% 53%) 0%, hsl(25 85% 48%) 100%);
     
-    /* Sombras mais dramáticas */
-    --shadow-dramatic: 0 25px 50px -12px hsl(var(--primary) / 0.4);
-    --shadow-card: 0 8px 32px -8px hsl(var(--primary) / 0.2);
-    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
+    /* Sombras mais suaves */
+    --shadow-dramatic: 0 25px 50px -12px hsl(25 95% 53% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(25 95% 53% / 0.15);
+    --shadow-glow: 0 0 30px hsl(25 95% 53% / 0.2);
 
     --radius: 1rem;
 
@@ -80,14 +80,14 @@ All colors MUST be HSL.
     --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 342 75% 41%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 51 100% 50%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 25 100% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;

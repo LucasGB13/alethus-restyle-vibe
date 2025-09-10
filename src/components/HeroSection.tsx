@@ -1,22 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Trophy, Users, BookOpen, Sparkles } from "lucide-react";
+import studentsImage from "@/assets/students-classroom.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden flex items-center">
-      {/* Animated Background Elements */}
+    <section className="relative min-h-screen overflow-hidden flex items-center">
+      {/* Background Image */}
       <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full animate-float"></div>
-        <div className="absolute top-1/3 right-20 w-32 h-32 bg-accent/10 transform rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
+        <img 
+          src={studentsImage} 
+          alt="Estudantes do Colégio Alethus"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      </div>
+
+      {/* Subtle overlay elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-16 h-16 bg-primary/10 rounded-full animate-float"></div>
+        <div className="absolute top-1/3 right-20 w-20 h-20 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -24,7 +29,7 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-white space-y-8 animate-slide-up">
             <div className="space-y-6">
-              <Badge className="bg-accent text-accent-foreground font-bold text-sm px-4 py-2 animate-fade-in">
+              <Badge className="bg-primary text-white font-bold text-sm px-4 py-2 animate-fade-in">
                 <Sparkles className="w-4 h-4 mr-2" />
                 NOVO ENSINO MÉDIO 2025
               </Badge>
@@ -32,20 +37,20 @@ const HeroSection = () => {
               <div className="space-y-4">
                 <h1 className="text-6xl lg:text-7xl font-black leading-tight">
                   <span className="block">MATRÍCULAS</span>
-                  <span className="block text-accent drop-shadow-2xl">ABERTAS!</span>
+                  <span className="block text-primary drop-shadow-2xl">ABERTAS!</span>
                 </h1>
-                <div className="w-20 h-2 bg-accent rounded-full"></div>
+                <div className="w-20 h-2 bg-primary rounded-full"></div>
               </div>
               
               <p className="text-2xl lg:text-3xl text-white/95 max-w-lg font-light leading-relaxed">
-                Sua chance de ser <span className="font-bold text-accent">Poliedro</span>, 
+                Sua chance de ser <span className="font-bold text-primary">Poliedro</span>, 
                 sua decisão de ser <span className="font-bold">você</span> no futuro certo
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
               <Button 
-                variant="accent" 
+                variant="default" 
                 size="lg" 
                 className="text-xl font-bold py-4 px-8 group"
               >
@@ -61,7 +66,7 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Stats com animação */}
+            {/* Stats com design mais limpo */}
             <div className="grid grid-cols-3 gap-8 pt-12">
               {[
                 { icon: Trophy, value: "98%", label: "Aprovação", delay: "0.2s" },
@@ -69,38 +74,38 @@ const HeroSection = () => {
                 { icon: BookOpen, value: "15+", label: "Anos", delay: "0.6s" }
               ].map((stat, index) => (
                 <div key={index} className="text-center animate-fade-in" style={{ animationDelay: stat.delay }}>
-                  <div className="flex items-center justify-center w-16 h-16 bg-accent rounded-2xl mx-auto mb-4 shadow-glow">
-                    <stat.icon className="w-8 h-8 text-accent-foreground" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl mx-auto mb-4 border border-white/20">
+                    <stat.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="text-4xl font-black text-accent">{stat.value}</div>
+                  <div className="text-4xl font-black text-primary">{stat.value}</div>
                   <div className="text-lg text-white/90 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Card de Prova de Bolsa Modernizado */}
+          {/* Card de Prova de Bolsa Mais Limpo */}
           <div className="relative animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="absolute inset-0 bg-gradient-accent rounded-3xl transform rotate-2 shadow-dramatic"></div>
-            <div className="relative bg-white rounded-3xl p-8 shadow-glow border-4 border-accent">
+            <div className="absolute inset-0 bg-primary/20 rounded-3xl transform rotate-1 blur-sm"></div>
+            <div className="relative bg-white/95 backdrop-blur-lg rounded-3xl p-8 shadow-dramatic border border-white/20">
               <div className="space-y-8">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-hero rounded-2xl mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-4">
                     <Trophy className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-3xl font-black text-primary mb-2">
+                  <h3 className="text-3xl font-black text-foreground mb-2">
                     PROVA DE BOLSA
                   </h3>
-                  <div className="text-6xl font-black text-secondary">2026</div>
+                  <div className="text-6xl font-black text-primary">2026</div>
                   <p className="text-muted-foreground text-lg mt-2">
                     Sua chance de conquistar o futuro
                   </p>
                 </div>
                 
-                <div className="bg-gradient-accent p-6 rounded-2xl text-center shadow-card">
-                  <div className="text-4xl font-black text-accent-foreground mb-2">11/09</div>
-                  <div className="text-2xl font-bold text-accent-foreground">às 15:00</div>
-                  <p className="text-accent-foreground/80 text-sm mt-2">Data da prova de bolsas</p>
+                <div className="bg-primary p-6 rounded-2xl text-center shadow-card">
+                  <div className="text-4xl font-black text-white mb-2">11/09</div>
+                  <div className="text-2xl font-bold text-white">às 15:00</div>
+                  <p className="text-white/90 text-sm mt-2">Data da prova de bolsas</p>
                 </div>
 
                 <Button 
